@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plantuml
+spec:
+  selector:
+    matchLabels:
+      app: plantuml
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: plantuml
+    spec:
+      containers:
+      - name: plantuml
+        image: plantuml/plantuml-server:jetty
+        ports:
+        - containerPort: 8080
