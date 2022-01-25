@@ -1,2 +1,3 @@
+icon: https://plantuml.com/Logo_PlantUML.svg
 deploy:
   - kubectl apply -f k8s
